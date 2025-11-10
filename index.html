@@ -19,20 +19,44 @@
 <!-- Header will load here -->
 <div id="header-placeholder"></div>
 
-<!-- Main content -->
-<main style="padding:20px; text-align:center;">
-  <h1>Welcome to Scentilla</h1>
-  <p>Explore our collections and blog.</p>
-</main>
+<!-- Hero Slider Section -->
+<section class="hero-slider">
 
-<!-- Script to load header and make dropdown clickable -->
+  <!-- Slide 1 -->
+  <div class="slide active" style="background-image: url('images/banner1.png');">
+    <div class="hero-content">
+      <p class="small-text">Discover Your Signature</p>
+      <h1 class="main-heading">LUXURY FRAGRANCES</h1>
+      <h2 class="sub-heading">FOR EVERY OCCASION</h2>
+      <a href="#" class="shop-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide" style="background-image: url('images/banner2.png');">
+    <div class="hero-content">
+      <p class="small-text">New Arrival</p>
+      <h1 class="main-heading">SCENT THAT DEFINES YOU</h1>
+      <h2 class="sub-heading">ELEGANT & LASTING</h2>
+      <a href="#" class="shop-btn">Explore Collection</a>
+    </div>
+  </div>
+
+  <!-- Slider Dots -->
+  <div class="slider-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+
+</section>
+
+<!-- Load Header & Dropdown JS -->
 <script>
 fetch('header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
 
-    // Make dropdown clickable
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
       const link = dropdown.querySelector('a');
@@ -45,15 +69,39 @@ fetch('header.html')
         menu.style.display = isVisible ? 'none' : 'flex';
       });
 
-      // Hide dropdown if clicked outside
       document.addEventListener('click', (e) => {
         if (!dropdown.contains(e.target)) {
           menu.style.display = 'none';
         }
       });
     });
-  })
-  .catch(error => console.error('Error loading header:', error));
+  });
+</script>
+
+<!-- Slider Script -->
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function changeSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slides[n].classList.add('active');
+  dots[n].classList.add('active');
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    slideIndex = i;
+    changeSlide(slideIndex);
+  });
+});
+
+setInterval(() => {
+  slideIndex = (slideIndex + 1) % slides.length;
+  changeSlide(slideIndex);
+}, 5000);
 </script>
 
 </body>

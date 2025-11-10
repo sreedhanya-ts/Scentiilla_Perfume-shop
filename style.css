@@ -118,3 +118,103 @@ body {
   color:#cea679;
   margin-left: 3px;
 }
+
+
+
+
+
+
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* LEFT ALIGNED TEXT */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #0b2a45;
+  max-width: 550px;
+}
+
+.small-text {
+  font-size: 18px;
+  color: #b0906b;
+  margin-bottom: 8px;
+}
+
+.main-heading {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.sub-heading {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 8px 0 25px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #b0906b;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #b0906b;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.shop-btn:hover { background: #b0906b; color: white; }
+
+/* Slider Dots */
+.slider-dots {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #555;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .hero-content { left: 5%; max-width: 90%; }
+  .main-heading { font-size: 32px; }
+  .sub-heading { font-size: 22px; }
+}
