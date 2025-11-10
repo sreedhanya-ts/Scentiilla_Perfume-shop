@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scentilla - Home</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600">
+
+  <!-- Link your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header will load here -->
+<div id="header-placeholder"></div>
+
+<!-- Main content -->
+<main style="padding:20px; text-align:center;">
+  <h1>Welcome to Scentilla</h1>
+  <p>Explore our collections and blog.</p>
+</main>
+
+<!-- Script to load header and make dropdown clickable -->
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+
+    // Make dropdown clickable
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      const menu = dropdown.querySelector('.dropdown-menu');
+
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isVisible = menu.style.display === 'flex';
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+        menu.style.display = isVisible ? 'none' : 'flex';
+      });
+
+      // Hide dropdown if clicked outside
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  })
+  .catch(error => console.error('Error loading header:', error));
+</script>
+
+</body>
+</html>
