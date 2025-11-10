@@ -22,7 +22,7 @@ body {
   color: #333;
   transition: 0.3s;
 }
-.social-icons a:hover { color: #000; }
+.social-icons a:hover { color: #cea679; }
 
 .header-logo img {
   height: 65px;
@@ -75,7 +75,7 @@ body {
   font-weight: 500;
   transition: 0.3s;
 }
-.menu-bar ul li a:hover { color: #000; }
+.menu-bar ul li a:hover { color: #cea679; }
 
 .menu-bar ul li a i { font-size: 18px; }
 
@@ -115,6 +115,6 @@ body {
   transition: 0.3s;
 }
 .dropdown-column a:hover {
-  color: #ffac03;
+  color:#cea679;
   margin-left: 3px;
 }
