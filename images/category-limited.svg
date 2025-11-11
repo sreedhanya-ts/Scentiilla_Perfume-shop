@@ -1,0 +1,44 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="catGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe4e1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f0a8b1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4708a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f5f1ed" stroke="#f0a8b1" stroke-width="2"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="30" cy="30" r="3" fill="#f0a8b1" opacity="0.3"/>
+  <circle cx="170" cy="170" r="3" fill="#f0a8b1" opacity="0.3"/>
+  
+  <!-- Limited Edition Luxury Bottle -->
+  <g transform="translate(50, 25)">
+    <!-- Decorative crown top -->
+    <circle cx="60" cy="-6" r="5" fill="#d4708a"/>
+    <path d="M 55 -3 L 60 0 L 65 -3" fill="#d4708a" opacity="0.7"/>
+    
+    <!-- Premium cap -->
+    <rect x="42" y="2" width="36" height="14" rx="3" fill="#8b7355"/>
+    
+    <!-- Neck -->
+    <path d="M 45 16 L 43 32 Q 43 36 45 38 L 75 38 Q 77 36 77 32 L 75 16 Z" fill="url(#catGrad4)" stroke="#d4708a" stroke-width="1.5"/>
+    
+    <!-- Rounded luxury body -->
+    <ellipse cx="60" cy="78" rx="30" ry="42" fill="url(#catGrad4)" stroke="#d4708a" stroke-width="2"/>
+    
+    <!-- Liquid -->
+    <ellipse cx="60" cy="105" rx="28" ry="18" fill="#ffe4e1" opacity="0.5"/>
+    
+    <!-- Sparkle effects -->
+    <circle cx="48" cy="60" r="3" fill="white" opacity="0.4"/>
+    <circle cx="70" cy="85" r="2" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Text label -->
+  <text x="100" y="180" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#d4708a" text-anchor="middle" letter-spacing="1">
+    LIMITED EDITION
+  </text>
+</svg>
