@@ -1,8 +1,86 @@
+// ========== MOBILE MENU FUNCTIONALITY ==========
+function initializeMobileMenu() {
+  const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+  const mobileMoreMenu = document.getElementById('mobileMoreMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const closeMenu = document.getElementById('closeMenu');
+  const accordionToggles = document.querySelectorAll('.accordion-toggle');
+  const navItems = document.querySelectorAll('.nav-item[data-page]');
+
+  // Open menu
+  mobileMenuIcon?.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+  });
+
+  // Open MORE menu
+  mobileMoreMenu?.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+  });
+
+  // Close menu
+  closeMenu?.addEventListener('click', function() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Close menu on overlay click
+  mobileMenuOverlay?.addEventListener('click', function() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Close menu when clicking on links
+  document.querySelectorAll('.mobile-menu-list > li > a').forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.remove('active');
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Accordion toggle functionality
+  accordionToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      this.classList.toggle('active');
+      content.classList.toggle('active');
+    });
+  });
+
+  // Bottom nav item active state
+  navItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      if (this.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        navItems.forEach(nav => nav.classList.remove('active'));
+        this.classList.add('active');
+      }
+    });
+  });
+
+  // Set HOME as active by default
+  navItems.forEach(item => {
+    if (item.getAttribute('data-page') === 'home') {
+      item.classList.add('active');
+    }
+  });
+}
+
 // ========== SHOPPING CART FUNCTIONALITY ==========
 let cart = [];
 
 // Add to cart button functionality
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize mobile menu
+  initializeMobileMenu();
+
   const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
   
   addToCartButtons.forEach(button => {
