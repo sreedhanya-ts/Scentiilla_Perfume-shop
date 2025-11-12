@@ -23,7 +23,7 @@ a {
 :root {
   --primary-beige: #f5f1ed;
   --secondary-beige: #e8dcd4;
-  --gold: #b0906b;
+  --gold: #d8b802;
   --dark-gold: #8b7355;
   --black: #1a1a1a;
   --light-bg: #f9f7f3;
@@ -280,7 +280,7 @@ a {
 
 .small-text {
   font-size: 18px;
-  color: #b0906b;
+  color: #c6af03;
   margin-bottom: 8px;
 }
 
