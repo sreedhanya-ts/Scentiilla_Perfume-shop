@@ -47,7 +47,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background: #f4f1f1;
+  background: #ffffff;
   border-bottom: 1px solid #3a3a3a;
 }
 
@@ -72,30 +72,33 @@ a {
 .header-logo {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   text-align: center;
 }
 
 .header-logo img {
-  height: 60px;
+  /* Increased logo size to better match the provided model image */
+  height: 100px;
+  max-width: 1000px;
+  width: 300px;;
   display: block;
-  margin: 0 auto;
+  margin: 0;
   animation: fadeIn 0.6s ease;
 }
 
- 
-
 .brand-text {
   display: block;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   letter-spacing: 2px;
-  text-align: center;
-  margin-top: -4px;
+  text-align: left;
+  margin: 0;
   color: #000000;
   text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .header-right {
@@ -366,7 +369,7 @@ a {
 
 /* ========== FEATURED PRODUCTS SECTION ========== */
 .featured-products {
-  background: #ffffff;
+  background: #2d2d2d;
 }
 
 .section-header {
@@ -375,7 +378,7 @@ a {
 
 .section-subtitle {
   font-size: 14px;
-  color: #2d2d2d;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 8px;
@@ -555,7 +558,7 @@ a {
 }
 
 .category-card {
-  background: white;
+  background: #2d2d2d;
   padding: 40px 30px;
   text-align: center;
   border-radius: 8px;
@@ -585,13 +588,13 @@ a {
 .category-name {
   font-size: 20px;
   font-weight: 600;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .category-description {
   font-size: 13px;
-  color: #555555;
+  color: #dfdfdf;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -1108,7 +1111,8 @@ a {
 }
 
 .mobile-logo img {
-  height: 90px;
+  /* Mobile logo size increased but constrained to avoid layout issues */
+  height: 60px;
 }
 
 .mobile-logo .brand-text {
