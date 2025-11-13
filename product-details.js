@@ -191,6 +191,7 @@ function setupEventListeners() {
   // Quantity input change
   document.getElementById('quantityInput').addEventListener('change', function() {
     updateQuantityButtons();
+    updateTotalPrice();
   });
   
   // Quantity input validation
@@ -203,6 +204,7 @@ function setupEventListeners() {
     if (val > max) this.value = max;
     
     updateQuantityButtons();
+    updateTotalPrice();
   });
   
   // Add to cart button
@@ -217,8 +219,9 @@ function setupEventListeners() {
   // Mobile menu functionality
   setupMobileMenu();
   
-  // Initialize quantity buttons state
+  // Initialize quantity buttons state and total price
   updateQuantityButtons();
+  updateTotalPrice();
 }
 
 // Increase quantity
@@ -230,6 +233,7 @@ function increaseQuantity() {
   if (currentQty < maxQty) {
     input.value = currentQty + 1;
     updateQuantityButtons();
+    updateTotalPrice();
   }
 }
 
@@ -242,6 +246,7 @@ function decreaseQuantity() {
   if (currentQty > minQty) {
     input.value = currentQty - 1;
     updateQuantityButtons();
+    updateTotalPrice();
   }
 }
 
@@ -274,6 +279,26 @@ function updateQuantityButtons() {
     increaseBtn.disabled = false;
     increaseBtn.style.opacity = '1';
     increaseBtn.style.cursor = 'pointer';
+  }
+}
+
+// Update total price based on quantity
+function updateTotalPrice() {
+  const quantity = parseInt(document.getElementById('quantityInput').value) || 1;
+  const priceText = document.getElementById('productPrice').textContent;
+  const price = parseFloat(priceText.replace('$', ''));
+  const totalPrice = (price * quantity).toFixed(2);
+  const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+  const totalPriceElement = document.getElementById('totalPrice');
+  
+  // Update total price
+  totalPriceElement.textContent = '$' + totalPrice;
+  
+  // Show/hide total price display
+  if (quantity > 1) {
+    totalPriceDisplay.style.display = 'block';
+  } else {
+    totalPriceDisplay.style.display = 'none';
   }
 }
 
