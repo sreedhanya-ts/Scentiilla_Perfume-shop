@@ -1686,9 +1686,9 @@ a {
 }
 
 .about-us-main-title {
-  font-size: 72px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: #f5f5f5;
   margin: 0 0 20px 0;
   text-transform: uppercase;
@@ -1696,12 +1696,12 @@ a {
 }
 
 .about-us-tagline {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: #b0b0b0;
+  color: #d0d0d0;
   margin: 0;
-  font-style: italic;
+  font-style: normal;
 }
 
 .hero-accent-line {
@@ -2093,11 +2093,11 @@ a {
 /* About Us Responsive Design */
 @media (max-width: 1024px) {
   .about-us-main-title {
-    font-size: 56px;
+    font-size: 44px;
   }
 
   .about-us-tagline {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .about-section-title {
@@ -2120,7 +2120,7 @@ a {
   }
 
   .about-us-tagline {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .about-us-hero {
@@ -2272,9 +2272,9 @@ a {
 }
 
 .products-main-title {
-  font-size: 72px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: #f5f5f5;
   margin: 0 0 20px 0;
   text-transform: uppercase;
@@ -2282,12 +2282,12 @@ a {
 }
 
 .products-tagline {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: #b0b0b0;
+  color: #d0d0d0;
   margin: 0;
-  font-style: italic;
+  font-style: normal;
 }
 
 /* Filter Section */
@@ -2389,7 +2389,7 @@ a {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #e0a76f;
+  background: #d1cfcf;
   color: #0f0f0f;
   padding: 6px 14px;
   border-radius: 4px;
@@ -2436,8 +2436,8 @@ a {
 }
 
 .btn-icon-luxury:hover {
-  background: #e0a76f;
-  border-color: #e0a76f;
+  background: #707070;
+  border-color: #707070;
   color: #0f0f0f;
   transform: scale(1.15);
 }
@@ -2452,7 +2452,7 @@ a {
 
 .product-name-luxury {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 8px;
   color: #f5f5f5;
   letter-spacing: 0.5px;
@@ -2460,7 +2460,7 @@ a {
 
 .product-scent-description {
   font-size: 13px;
-  color: #a0a0a0;
+  color:  #707070;
   line-height: 1.6;
   margin-bottom: 16px;
   min-height: 40px;
@@ -2474,7 +2474,7 @@ a {
 }
 
 .product-rating-luxury i {
-  color: #e0a76f;
+  color: #6c6c6c;
   font-size: 12px;
 }
 
@@ -2541,11 +2541,11 @@ a {
 /* Responsive - Tablet */
 @media (max-width: 1024px) {
   .products-main-title {
-    font-size: 56px;
+    font-size: 44px;
   }
 
   .products-tagline {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .products-grid {
@@ -2566,7 +2566,7 @@ a {
   }
 
   .products-tagline {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .products-collection {
