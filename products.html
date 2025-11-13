@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Collection - Scentiilla Luxury Fragrances</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Link your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="custom-header">
+
+  <!-- ======= Desktop Top Bar ======= -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <div class="header-logo">
+     <p><img src="images/logo1.png" alt="Logo"></p> 
+    </div>
+
+    <div class="header-right">
+      <select class="country-select" style="color: #1a1a1a;">
+        <option>INDIA</option>
+        <option>USA</option>
+        <option>UAE</option>
+      </select>
+
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="far fa-heart"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+      <div class="search-box" style="border-bottom:1px solid #333;display:inline-flex;align-items:center;">
+        <input type="text" placeholder="Search" style="border:none;outline:none;padding:4px;">
+        <button style="background:none;border:none;cursor:pointer;">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Mobile Top Header ======= -->
+  <div class="mobile-top-header">
+    <button class="mobile-menu-icon" id="mobileMenuIcon">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="header-logo mobile-logo">
+      <img src="images/logo1.png" alt="Logo">
+    </div>
+
+    <div class="mobile-top-icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </div>
+
+  <!-- ======= Mobile Slide-out Menu ======= -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h3>MENU</h3>
+      <button class="close-menu" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-menu-list">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">OUR COLLECTION</a></li>
+      <li><a href="#">CONCENTRATED PERFUME</a></li>
+      <li><a href="#">EAU DE PARFUM</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+      <li><a href="about-us.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+
+      <!-- Mobile Blog Accordion -->
+      <li class="mobile-accordion">
+        <button class="accordion-toggle">BLOG <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <div class="accordion-section">
+            <h5>BLOG LAYOUTS</h5>
+            <a href="#">Blog Details</a>
+            <a href="#">Blog Details Sidebar</a>
+            <a href="#">No Sidebar</a>
+          </div>
+
+          <div class="accordion-section">
+            <h5>BLOG PAGES</h5>
+            <a href="#">Author</a>
+            <a href="#">Category</a>
+            <a href="#">Blog Tag</a>
+          </div>
+
+          <div class="accordion-section">
+            <h5>POST FORMATS</h5>
+            <a href="#">Blog Sidebar</a>
+            <a href="#">Blog Fullwidth</a>
+            <a href="#">Gallery Format</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Country Selector in Mobile Menu -->
+    <div class="mobile-menu-footer">
+      <select class="country-select-mobile">
+        <option>🌍 INDIA</option>
+        <option>🌍 USA</option>
+        <option>🌍 UAE</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- ======= Mobile Bottom Navigation ======= -->
+  <div class="mobile-bottom-nav mobile-only">
+    <a href="index.html" class="nav-item" data-page="home">
+      <i class="fas fa-home"></i>
+      <span>HOME</span>
+    </a>
+    <a href="products.html" class="nav-item" data-page="shop">
+      <i class="fas fa-shopping-bag"></i>
+      <span>SHOP</span>
+    </a>
+    <a href="#account" class="nav-item" data-page="account">
+      <i class="fas fa-user"></i>
+      <span>ACCOUNT</span>
+    </a>
+    <a href="tel:+1234567890" class="nav-item" data-page="call">
+      <i class="fas fa-phone"></i>
+      <span>CALL</span>
+    </a>
+    <button class="nav-item more-menu" id="mobileMoreMenu">
+      <i class="fas fa-ellipsis-v"></i>
+      <span>MORE</span>
+    </button>
+  </div>
+
+  <!-- ======= Main Navigation (Desktop) ======= -->
+  <nav class="menu-bar">
+    <ul>
+      <li><a href="#">CONCENTRATED PERFUME</a></li>
+      <li><a href="#">EAU DE PARFUM</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+      <li><a href="about-us.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+
+      <!-- BLOG DROPDOWN SECTION -->
+      <li class="dropdown">
+        <a href="#">BLOG <i class="fas fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+
+          <div class="dropdown-column">
+            <h4>BLOG LAYOUTS</h4>
+            <a href="#">Blog Details</a>
+            <a href="#">Blog Details Sidebar</a>
+            <a href="#">No Sidebar</a>
+          </div>
+
+          <div class="dropdown-column">
+            <h4>BLOG PAGES</h4>
+            <a href="#">Author</a>
+            <a href="#">Category</a>
+            <a href="#">Blog Tag</a>
+          </div>
+
+          <div class="dropdown-column">
+            <h4>POST FORMATS</h4>
+            <a href="#">Blog Sidebar</a>
+            <a href="#">Blog Fullwidth</a>
+            <a href="#">Gallery Format</a>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ========== PRODUCTS COLLECTION PAGE ========== -->
+
+<!-- Hero Section -->
+<section class="products-hero">
+  <div class="products-hero-content">
+    <h1 class="products-main-title">Our Collection</h1>
+    <p class="products-tagline">Explore Our Scents</p>
+    <div class="hero-accent-line"></div>
+  </div>
+</section>
+
+<!-- Filter Section -->
+<section class="products-filter-section">
+  <div class="container">
+    <div class="filter-controls">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="women">For Women</button>
+      <button class="filter-btn" data-filter="men">For Men</button>
+      <button class="filter-btn" data-filter="unisex">Unisex</button>
+    </div>
+  </div>
+</section>
+
+<!-- Products Grid -->
+<section class="products-collection">
+  <div class="container">
+    <div class="products-grid">
+
+      <!-- Product Card 1 -->
+      <div class="product-card-luxury" data-category="women">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #e0a76f;"></i>
+          </div>
+          <div class="product-badge">NEW</div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Blooming Essence</h3>
+          <p class="product-scent-description">A delicate blend of rose, jasmine, and sandalwood. Perfect for everyday elegance and special moments.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(128 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$89.99</span>
+            <span class="price-original-luxury">$119.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card-luxury" data-category="men">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #b8860b;"></i>
+          </div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Midnight Noir</h3>
+          <p class="product-scent-description">Sophisticated blend of oud, leather, and cedarwood. A bold statement for the modern gentleman.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(256 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$94.99</span>
+            <span class="price-original-luxury">$129.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card-luxury" data-category="unisex">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #d4af37;"></i>
+          </div>
+          <div class="product-badge">BESTSELLER</div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Golden Hour</h3>
+          <p class="product-scent-description">Warm amber, vanilla, and tonka bean create an enchanting unisex fragrance that captivates all.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(342 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$99.99</span>
+            <span class="price-original-luxury">$139.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card-luxury" data-category="women">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #e091c0;"></i>
+          </div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Velvet Romance</h3>
+          <p class="product-scent-description">Red berries and musk blend harmoniously with white florals for an irresistibly romantic fragrance.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(189 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$84.99</span>
+            <span class="price-original-luxury">$109.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card-luxury" data-category="men">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #7cb9d6;"></i>
+          </div>
+          <div class="product-badge">LUXURY</div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Aqua Momentum</h3>
+          <p class="product-scent-description">Fresh citrus notes with a touch of mint and driftwood. Perfect for the adventurous spirit.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(267 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$102.99</span>
+            <span class="price-original-luxury">$149.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card-luxury" data-category="unisex">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #8b7355;"></i>
+          </div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Earthy Whisper</h3>
+          <p class="product-scent-description">Vetiver, patchouli, and subtle spices create a grounding, sophisticated unisex composition.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>(145 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$79.99</span>
+            <span class="price-original-luxury">$99.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="product-card-luxury" data-category="women">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #f4a460;"></i>
+          </div>
+          <div class="product-badge">LIMITED</div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Sunset Serenity</h3>
+          <p class="product-scent-description">Peach nectar, orange blossom, and warm spices evoke the beauty of a golden sunset.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(94 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$88.99</span>
+            <span class="price-original-luxury">$118.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="product-card-luxury" data-category="men">
+        <div class="product-image-container">
+          <div class="product-image" style="background: linear-gradient(135deg, #2d2d2d, #1f1f1f); display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-bottle-droplet" style="font-size: 60px; color: #a9927d;"></i>
+          </div>
+          <div class="product-overlay-luxury">
+            <button class="btn-icon-luxury" title="Add to Wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+            <button class="btn-icon-luxury" title="Quick View">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info-luxury">
+          <h3 class="product-name-luxury">Steel & Smoke</h3>
+          <p class="product-scent-description">Tobacco leaf and smoky birch create a rugged yet refined fragrance for the discerning man.</p>
+          
+          <div class="product-rating-luxury">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(201 reviews)</span>
+          </div>
+
+          <div class="product-price-luxury">
+            <span class="price-current-luxury">$97.99</span>
+            <span class="price-original-luxury">$127.99</span>
+          </div>
+
+          <button class="btn-add-cart-luxury">
+            <i class="fas fa-shopping-bag"></i> Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>SCENTIILLA</h3>
+            <p class="footer-tagline">Luxury Fragrances Since 2010</p>
+          </div>
+          <p class="footer-text">
+            Discover the essence of luxury with our handcrafted perfumes from around the world.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Shop All Perfumes</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gift Sets</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Customer Service</h5>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Contact Info</h5>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Fashion District, NY 10001</p>
+            <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> support@scentiilla.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM EST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scentiilla Luxury Fragrances. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Link your JS -->
+<script src="script.js"></script>
+
+<!-- Products Page Script -->
+<script>
+  // Filter functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card-luxury');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter products
+        productCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Add to cart button functionality
+    document.querySelectorAll('.btn-add-cart-luxury').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const card = this.closest('.product-card-luxury');
+        const productName = card.querySelector('.product-name-luxury').textContent;
+        const price = card.querySelector('.price-current-luxury').textContent;
+        
+        // Show feedback
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+        this.style.background = '#505050';
+        
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.style.background = '';
+        }, 2000);
+
+        console.log(`Added to cart: ${productName} - ${price}`);
+      });
+    });
+
+    // Wishlist functionality
+    document.querySelectorAll('.btn-icon-luxury').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('far')) {
+          icon.classList.remove('far');
+          icon.classList.add('fas');
+          this.style.color = '#e0a76f';
+        } else {
+          icon.classList.remove('fas');
+          icon.classList.add('far');
+          this.style.color = '#e0e0e0';
+        }
+      });
+    });
+
+    // Initialize mobile menu
+    initializeMobileMenu();
+  });
+</script>
+
+</body>
+</html>
