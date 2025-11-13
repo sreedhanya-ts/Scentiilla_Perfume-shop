@@ -20,6 +20,7 @@
 <body>
 
 <!-- Header -->
+<!-- Header will load here -->
 <header class="custom-header">
 
   <!-- ======= Desktop Top Bar ======= -->
@@ -32,11 +33,12 @@
     </div>
 
     <div class="header-logo">
-      <img src="images/logo1.png" alt="SCENTIILLA Logo">
+     <p><img src="images/logo1.png" alt="Logo"></p> 
+     
     </div>
 
     <div class="header-right">
-      <select class="country-select">
+      <select class="country-select" style="color: #1a1a1a;">
         <option>INDIA</option>
         <option>USA</option>
         <option>UAE</option>
@@ -45,16 +47,18 @@
       <a href="#"><i class="fas fa-user"></i></a>
       <a href="#"><i class="far fa-heart"></i></a>
       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <!-- <a href="#" class="cart-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+        <img src="images/cart-icon.svg" alt="Cart" style="width: 24px; height: 24px;">
+      </a> -->
 
-      <div class="search-box">
-        <input type="text" placeholder="Search">
-        <button>
+      <div class="search-box" style="border-bottom:1px solid #333;display:inline-flex;align-items:center;">
+        <input type="text" placeholder="Search" style="border:none;outline:none;padding:4px;">
+        <button style="background:none;border:none;cursor:pointer;">
           <i class="fas fa-search"></i>
         </button>
       </div>
     </div>
   </div>
-
   <!-- ======= Mobile Top Header ======= -->
   <div class="mobile-top-header">
     <button class="mobile-menu-icon" id="mobileMenuIcon">
@@ -62,8 +66,7 @@
     </button>
 
     <div class="header-logo mobile-logo">
-      <img src="images/logo.png" alt="SCENTIILLA Logo">
-      <span class="brand-text">SCENTIILLA</span>
+      <img src="images/logo1.png" alt="SCENTIILLA Logo">
     </div>
 
     <div class="mobile-top-icons">
@@ -72,15 +75,71 @@
     </div>
   </div>
 
-  <!-- ======= Main Navigation (Desktop) ======= -->
+ 
+ <!-- ======= Main Navigation (Desktop) ======= -->
   <nav class="menu-bar">
     <ul>
       <li><a href="index.html">HOME</a></li>
-      <li><a href="#shop">SHOP</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="contact.html" class="active">CONTACT</a></li>
+      <li><a href="#">CONCENTRATED PERFUME</a></li>
+      <li><a href="#">EAU DE PARFUM</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+      <li><a href="about-us.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+
+      <!-- BLOG DROPDOWN SECTION -->
+      <li class="dropdown">
+        <a href="#">BLOG <i class="fas fa-angle-down"></i></a>
+        <div class="dropdown-menu">
+
+          <div class="dropdown-column">
+            <h4>BLOG LAYOUTS</h4>
+            <a href="#">Blog Details</a>
+            <a href="#">Blog Details Sidebar</a>
+            <a href="#">No Sidebar</a>
+          </div>
+
+          <div class="dropdown-column">
+            <h4>BLOG PAGES</h4>
+            <a href="#">Author</a>
+            <a href="#">Category</a>
+            <a href="#">Blog Tag</a>
+          </div>
+
+          <div class="dropdown-column">
+            <h4>POST FORMATS</h4>
+            <a href="#">Blog Sidebar</a>
+            <a href="#">Blog Fullwidth</a>
+            <a href="#">Gallery Format</a>
+          </div>
+
+        </div>
+      </li>
     </ul>
   </nav>
+
+  <!-- ======= Mobile Bottom Navigation ======= -->
+  <div class="mobile-bottom-nav mobile-only">
+    <a href="index.html" class="nav-item" data-page="home">
+      <i class="fas fa-home"></i>
+      <span>HOME</span>
+    </a>
+    <a href="#shop" class="nav-item" data-page="shop">
+      <i class="fas fa-shopping-bag"></i>
+      <span>SHOP</span>
+    </a>
+    <a href="#account" class="nav-item" data-page="account">
+      <i class="fas fa-user"></i>
+      <span>ACCOUNT</span>
+    </a>
+    <a href="tel:+1234567890" class="nav-item" data-page="call">
+      <i class="fas fa-phone"></i>
+      <span>CALL</span>
+    </a>
+    <button class="nav-item more-menu" id="mobileMoreMenu">
+      <i class="fas fa-ellipsis-v"></i>
+      <span>MORE</span>
+    </button>
+  </div>
 </header>
 
 <!-- Hero Section -->
@@ -193,7 +252,7 @@
   </div>
 </section>
 
-<!-- Footer -->
+
 <!-- Footer -->
 <footer class="footer py-5">
   <div class="container">
@@ -290,6 +349,34 @@
     this.reset();
   });
 </script>
+<!-- Load Header & Dropdown JS -->
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
 
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      const menu = dropdown.querySelector('.dropdown-menu');
+
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isVisible = menu.style.display === 'flex';
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+        menu.style.display = isVisible ? 'none' : 'flex';
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+<!-- Main JS -->
+<script src="script.js"></script>
 </body>
 </html>

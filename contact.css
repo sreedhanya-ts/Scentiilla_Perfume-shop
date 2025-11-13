@@ -261,6 +261,131 @@ a {
   color: var(--gold);
   transform: scale(1.1);
 }
+/* ========== MOBILE BOTTOM NAVIGATION ========== */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--border-color);
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  min-width: 60px;
+  min-height: 60px;
+  color: var(--black);
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+
+.nav-item:hover {
+  color: var(--gold);
+  transform: scale(1.05);
+}
+
+.nav-item.active {
+  color: var(--gold);
+  border-top: 2px solid var(--gold);
+}
+
+.more-menu {
+  position: relative;
+}
+
+.more-menu:hover {
+  color: var(--gold);
+}
+/* ========== MOBILE BOTTOM NAVIGATION ========== */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--border-color);
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.mobile-only {
+  display: none;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  min-width: 60px;
+  min-height: 60px;
+  color: var(--black);
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+
+.nav-item:hover {
+  color: var(--gold);
+  transform: scale(1.05);
+}
+
+.nav-item.active {
+  color: var(--gold);
+  border-top: 2px solid var(--gold);
+}
+
+.more-menu {
+  position: relative;
+}
+
+.more-menu:hover {
+  color: var(--gold);
+}
+
 
 /* ========== HERO SECTION ========== */
 .contact-hero {
@@ -697,6 +822,18 @@ a {
   .form-group input,
   .form-group textarea {
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .mobile-bottom-nav {
+    display: flex !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+  }
+
+  body {
+    padding-bottom: 60px;
   }
 }
 
