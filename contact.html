@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - SCENTIILLA Luxury Fragrances</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&family=Playfair+Display:600,700">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Link Contact CSS -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="custom-header">
+
+  <!-- ======= Desktop Top Bar ======= -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <div class="header-logo">
+      <img src="images/logo1.png" alt="SCENTIILLA Logo">
+    </div>
+
+    <div class="header-right">
+      <select class="country-select">
+        <option>INDIA</option>
+        <option>USA</option>
+        <option>UAE</option>
+      </select>
+
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="far fa-heart"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button>
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Mobile Top Header ======= -->
+  <div class="mobile-top-header">
+    <button class="mobile-menu-icon" id="mobileMenuIcon">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="header-logo mobile-logo">
+      <img src="images/logo.png" alt="SCENTIILLA Logo">
+      <span class="brand-text">SCENTIILLA</span>
+    </div>
+
+    <div class="mobile-top-icons">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </div>
+
+  <!-- ======= Main Navigation (Desktop) ======= -->
+  <nav class="menu-bar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="#shop">SHOP</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="contact.html" class="active">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="contact-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Contact Us</h1>
+    <p class="hero-subtitle">We'd love to hear from you. Get in touch with our team.</p>
+  </div>
+</section>
+
+<!-- Main Contact Section -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row g-5">
+      
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-wrapper">
+          <h2 class="section-title">Send Us a Message</h2>
+          <div class="title-underline"></div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-send-message">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-5">
+        <div class="contact-info-wrapper">
+          <h2 class="section-title">Contact Information</h2>
+          <div class="title-underline"></div>
+
+          <div class="contact-info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4>Address</h4>
+              <p>123 Luxury Lane<br>Fashion District<br>New York, NY 10001<br>United States</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-content">
+              <h4>Phone</h4>
+              <p><a href="tel:+18001234567">+1 (800) 123-4567</a></p>
+              <p class="small-text">Mon - Fri: 9:00 AM - 6:00 PM EST</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Email</h4>
+              <p><a href="mailto:support@scentiilla.com">support@scentiilla.com</a></p>
+              <p class="small-text">We'll respond within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-content">
+              <h4>Working Hours</h4>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+              Saturday: 10:00 AM - 5:00 PM<br>
+              Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Google Map Section -->
+<section class="map-section">
+  <h2 class="text-center mb-4">Find Us On The Map</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3855555%3A0x1c0fcf3f63d3d3d3!2s123%20Luxury%20Lane%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>SCENTIILLA</h3>
+            <p class="footer-tagline">Luxury Fragrances Since 2010</p>
+          </div>
+          <p class="footer-text">
+            Discover the essence of luxury with our handcrafted perfumes from around the world.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Shop All Perfumes</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gift Sets</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Customer Service</h5>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-section">
+          <h5 class="footer-title">Contact Info</h5>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Fashion District, NY 10001</p>
+            <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> support@scentiilla.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM EST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Scentiilla Luxury Fragrances. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Contact Form Script -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    // Show success message (in production, send to backend)
+    alert(`Thank you for your message, ${name}! We'll get back to you soon at ${email}`);
+    
+    // Reset form
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
