@@ -95,7 +95,7 @@ a {
   text-align: left;
   margin: 0;
   color: #000000;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 1.1;
 }
 
@@ -420,7 +420,7 @@ a {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -437,7 +437,7 @@ a {
 
 /* ========== SECTION TITLE ========== */
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #f5f5f5;
@@ -476,7 +476,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   color: #e0e0e0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
@@ -567,7 +567,7 @@ a {
   font-weight: 700;
   color: #f5f5f5;
   margin-bottom: 8px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
 }
 
@@ -600,7 +600,7 @@ a {
 }
 
 .map-section h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #f5f5f5;
@@ -643,7 +643,7 @@ a {
 .footer-tagline {
   font-size: 12px;
   color: #707070;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -684,7 +684,7 @@ a {
   font-weight: 600;
   color: #f5f5f5;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
 }
 

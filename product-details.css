@@ -121,7 +121,7 @@
 }
 
 .product-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
@@ -133,7 +133,7 @@
 .product-category-detail {
   color: #b0b0b0;
   font-size: 14px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin: 0;
 }
@@ -359,7 +359,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
   flex: 1;
   min-width: 250px;
@@ -491,7 +491,7 @@
 }
 
 .reviews-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
