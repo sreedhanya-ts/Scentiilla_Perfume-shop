@@ -532,6 +532,15 @@
 <!-- Main JS -->
 <script src="script.js"></script>
 
+<!-- Initialize Mobile Menu -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof initializeMobileMenu === 'function') {
+      initializeMobileMenu();
+    }
+  });
+</script>
+
 </body>
 </html>
 

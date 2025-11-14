@@ -14,6 +14,9 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
+  <!-- Link your CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- Link Contact CSS -->
   <link rel="stylesheet" href="contact.css">
 </head>
@@ -76,6 +79,62 @@
   </div>
 
  
+ <!-- ======= Mobile Slide-out Menu ======= -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h3>MENU</h3>
+      <button class="close-menu" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-menu-list">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="#">CONCENTRATED PERFUME</a></li>
+      <li><a href="#">EAU DE PARFUM</a></li>
+      <li><a href="#">COLLECTIONS</a></li>
+      <li><a href="about-us.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+
+      <!-- Mobile Blog Accordion -->
+      <li class="mobile-accordion">
+        <button class="accordion-toggle">BLOG <i class="fas fa-chevron-down"></i></button>
+        <div class="accordion-content">
+          <div class="accordion-section">
+            <h5>BLOG LAYOUTS</h5>
+            <a href="#">Blog Details</a>
+            <a href="#">Blog Details Sidebar</a>
+            <a href="#">No Sidebar</a>
+          </div>
+
+          <div class="accordion-section">
+            <h5>BLOG PAGES</h5>
+            <a href="#">Author</a>
+            <a href="#">Category</a>
+            <a href="#">Blog Tag</a>
+          </div>
+
+          <div class="accordion-section">
+            <h5>POST FORMATS</h5>
+            <a href="#">Blog Sidebar</a>
+            <a href="#">Blog Fullwidth</a>
+            <a href="#">Gallery Format</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Country Selector in Mobile Menu -->
+    <div class="mobile-menu-footer">
+      <select class="country-select-mobile">
+        <option>🌍 INDIA</option>
+        <option>🌍 USA</option>
+        <option>🌍 UAE</option>
+      </select>
+    </div>
+  </nav>
+
  <!-- ======= Main Navigation (Desktop) ======= -->
   <nav class="menu-bar">
     <ul>
@@ -378,5 +437,17 @@ fetch('header.html')
 </script>
 <!-- Main JS -->
 <script src="script.js"></script>
+
+<!-- Explicit Mobile Menu Init for Contact Page -->
+<script>
+  // Initialize mobile menu after script.js is loaded
+  if (typeof initializeMobileMenu === 'function') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeMobileMenu);
+    } else {
+      initializeMobileMenu();
+    }
+  }
+</script>
 </body>
 </html>
