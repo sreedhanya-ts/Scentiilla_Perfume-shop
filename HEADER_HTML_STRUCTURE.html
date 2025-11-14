@@ -1,0 +1,196 @@
+<!-- ============================================
+     RESPONSIVE HEADER - COMPLETE HTML STRUCTURE
+     FOR ALL PAGES (index.html, products.html, about-us.html, contact.html)
+     ============================================ -->
+
+<!-- COPY THIS ENTIRE SECTION INTO YOUR <header class="custom-header"> -->
+
+<!-- ======= Desktop Top Bar ======= -->
+<div class="top-bar">
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-pinterest"></i></a>
+  </div>
+
+  <div class="header-logo">
+    <p><img src="images/logo1.png" alt="Logo"></p> 
+  </div>
+
+  <div class="header-right">
+    <select class="country-select" style="color: #1a1a1a;">
+      <option>INDIA</option>
+      <option>USA</option>
+      <option>UAE</option>
+    </select>
+
+    <a href="#"><i class="fas fa-user"></i></a>
+    <a href="#"><i class="far fa-heart"></i></a>
+    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+    <div class="search-box" style="border-bottom:1px solid #333;display:inline-flex;align-items:center;">
+      <input type="text" placeholder="Search" style="border:none;outline:none;padding:4px;">
+      <button style="background:none;border:none;cursor:pointer;">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ======= Mobile Top Header (SHOWN ON MOBILE VIEW) ======= -->
+<!-- This is the header that matches your contact page design -->
+<div class="mobile-top-header">
+  <!-- Hamburger Menu Button (Left) -->
+  <button class="mobile-menu-icon" id="mobileMenuIcon">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Logo (Center) -->
+  <div class="header-logo mobile-logo">
+    <img src="images/logo1.png" alt="SCENTIILLA Logo">
+  </div>
+
+  <!-- Search & Shopping Icons (Right) -->
+  <div class="mobile-top-icons">
+    <a href="#"><i class="fas fa-search"></i></a>
+    <a href="#"><i class="fas fa-shopping-bag"></i></a>
+  </div>
+</div>
+
+<!-- ======= Mobile Slide-out Menu (HIDDEN BY DEFAULT) ======= -->
+<!-- Opens when hamburger menu or "MORE" button is clicked -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <h3>MENU</h3>
+    <button class="close-menu" id="closeMenu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <ul class="mobile-menu-list">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">OUR COLLECTION</a></li>
+    <li><a href="#">CONCENTRATED PERFUME</a></li>
+    <li><a href="#">EAU DE PARFUM</a></li>
+    <li><a href="#">COLLECTIONS</a></li>
+    <li><a href="about-us.html">ABOUT US</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
+
+    <!-- Mobile Blog Accordion -->
+    <li class="mobile-accordion">
+      <button class="accordion-toggle">BLOG <i class="fas fa-chevron-down"></i></button>
+      <div class="accordion-content">
+        <div class="accordion-section">
+          <h5>BLOG LAYOUTS</h5>
+          <a href="#">Blog Details</a>
+          <a href="#">Blog Details Sidebar</a>
+          <a href="#">No Sidebar</a>
+        </div>
+
+        <div class="accordion-section">
+          <h5>BLOG PAGES</h5>
+          <a href="#">Author</a>
+          <a href="#">Category</a>
+          <a href="#">Blog Tag</a>
+        </div>
+
+        <div class="accordion-section">
+          <h5>POST FORMATS</h5>
+          <a href="#">Blog Sidebar</a>
+          <a href="#">Blog Fullwidth</a>
+          <a href="#">Gallery Format</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Country Selector in Mobile Menu -->
+  <div class="mobile-menu-footer">
+    <select class="country-select-mobile">
+      <option>🌍 INDIA</option>
+      <option>🌍 USA</option>
+      <option>🌍 UAE</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ======= Mobile Bottom Navigation (FIXED AT BOTTOM ON MOBILE) ======= -->
+<!-- Shows 5 main navigation items at the bottom of the screen -->
+<div class="mobile-bottom-nav mobile-only">
+  <a href="index.html" class="nav-item" data-page="home">
+    <i class="fas fa-home"></i>
+    <span>HOME</span>
+  </a>
+  <a href="products.html" class="nav-item" data-page="shop">
+    <i class="fas fa-shopping-bag"></i>
+    <span>SHOP</span>
+  </a>
+  <a href="#account" class="nav-item" data-page="account">
+    <i class="fas fa-user"></i>
+    <span>ACCOUNT</span>
+  </a>
+  <a href="tel:+1234567890" class="nav-item" data-page="call">
+    <i class="fas fa-phone"></i>
+    <span>CALL</span>
+  </a>
+  <button class="nav-item more-menu" id="mobileMoreMenu">
+    <i class="fas fa-ellipsis-v"></i>
+    <span>MORE</span>
+  </button>
+</div>
+
+<!-- ======= Main Navigation (DESKTOP ONLY) ======= -->
+<!-- This navigation is hidden on mobile devices -->
+<nav class="menu-bar">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">OUR COLLECTION</a></li>
+    <li><a href="#">CONCENTRATED PERFUME</a></li>
+    <li><a href="#">EAU DE PARFUM</a></li>
+    <li><a href="#">COLLECTIONS</a></li>
+    <li><a href="about-us.html">ABOUT US</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
+
+    <!-- BLOG DROPDOWN SECTION -->
+    <li class="dropdown">
+      <a href="#">BLOG <i class="fas fa-angle-down"></i></a>
+      <div class="dropdown-menu">
+        <div class="dropdown-column">
+          <h4>BLOG LAYOUTS</h4>
+          <a href="#">Blog Details</a>
+          <a href="#">Blog Details Sidebar</a>
+          <a href="#">No Sidebar</a>
+        </div>
+
+        <div class="dropdown-column">
+          <h4>BLOG PAGES</h4>
+          <a href="#">Author</a>
+          <a href="#">Category</a>
+          <a href="#">Blog Tag</a>
+        </div>
+
+        <div class="dropdown-column">
+          <h4>POST FORMATS</h4>
+          <a href="#">Blog Sidebar</a>
+          <a href="#">Blog Fullwidth</a>
+          <a href="#">Gallery Format</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============================================
+     END OF HEADER STRUCTURE
+     ============================================ -->
+
+<!-- NOTES:
+1. This header structure should be identical on all pages
+2. Ensure all pages have the script.js file loaded (contains mobile menu functionality)
+3. Ensure all pages link to style.css which contains all the CSS below
+4. The mobile menu automatically opens when hamburger icon or MORE button is clicked
+5. The mobile menu automatically closes when any link is clicked
+6. The bottom navigation appears only on mobile devices (below 768px width)
+-->
