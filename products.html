@@ -633,6 +633,15 @@
 <script>
   // Filter functionality
   document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu FIRST (if not already initialized)
+    try {
+      if (typeof initializeMobileMenu === 'function') {
+        initializeMobileMenu();
+      }
+    } catch (e) {
+      console.warn('Failed to initialize mobile menu:', e);
+    }
+
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card-luxury');
 
@@ -693,9 +702,6 @@
         }
       });
     });
-
-    // Initialize mobile menu
-    initializeMobileMenu();
   });
 </script>
 
