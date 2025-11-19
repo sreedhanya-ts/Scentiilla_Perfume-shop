@@ -1,5 +1,5 @@
 /* ========== GENERAL STYLES ========== */
-* {
+/** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +20,7 @@ a {
 }
 
 /* ========== COLOR PALETTE ========== */
-:root {
+/*:root {
   --gold: #333333;
   --dark-gold: #1a1a1a;
   --black: #0a0a0a;
@@ -31,7 +31,7 @@ a {
 }
 
 /* ========== HEADER STYLES ========== */
-.custom-header {
+/*.custom-header {
   width: 100%;
   border-bottom: 2px solid var(--border-color);
   position: sticky;
@@ -96,7 +96,7 @@ a {
   margin: 0;
   color: #000000;
   /* text-transform: uppercase; */
-  line-height: 1.1;
+  /*line-height: 1.1;
 }
 
 .header-right {
@@ -368,7 +368,7 @@ a {
 }
 
 /* ========== MOBILE ACCORDION ========== */
-.mobile-accordion {
+/*.mobile-accordion {
   border-bottom: 1px solid #2a2a2a;
 }
 
@@ -472,7 +472,7 @@ a {
 
 
 /* ========== MOBILE BOTTOM NAVIGATION ========== */
-.mobile-bottom-nav {
+/*.mobile-bottom-nav {
   display: none;
   position: fixed;
   bottom: 0;
@@ -533,7 +533,7 @@ a {
 .more-menu:hover {
   color: var(--gold);
 }
-/* ========== MOBILE BOTTOM NAVIGATION ========== */
+/* ========== MOBILE BOTTOM NAVIGATION ========== *//*
 .mobile-bottom-nav {
   display: none;
   position: fixed;
@@ -598,7 +598,7 @@ a {
 
 
 /* ========== HERO SECTION ========== */
-/* Hero section uses about-us styling */
+/* Hero section uses about-us styling *//*
 .about-us-hero {
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #1f1f1f 100%);
   padding: 100px 30px;
@@ -675,7 +675,7 @@ a {
   }
 }
 
-/* ========== SECTION TITLE ========== */
+/* ========== SECTION TITLE ========== *//*
 .section-title {
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
@@ -693,7 +693,7 @@ a {
   border-radius: 2px;
 }
 
-/* ========== CONTACT SECTION ========== */
+/* ========== CONTACT SECTION ========== *//*
 .contact-section {
   background: #0f0f0f;
 }
@@ -716,7 +716,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   color: #e0e0e0;
-  /* text-transform: uppercase; */
+  /* text-transform: uppercase; *//*
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
@@ -768,7 +768,7 @@ a {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* ========== CONTACT INFO ========== */
+/* ========== CONTACT INFO ========== *//*
 .contact-info-wrapper {
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
@@ -807,7 +807,7 @@ a {
   font-weight: 700;
   color: #f5f5f5;
   margin-bottom: 8px;
-  /* text-transform: uppercase; */
+  /* text-transform: uppercase; *//*
   letter-spacing: 1px;
 }
 
@@ -833,7 +833,7 @@ a {
   margin-top: 8px;
 }
 
-/* ========== MAP SECTION ========== */
+/* ========== MAP SECTION ========== *//*
 .map-section {
   background: var(--dark-bg);
   padding: 80px 0;
@@ -862,7 +862,7 @@ a {
   border: none;
 }
 
-/* ========== FOOTER ========== */
+/* ========== FOOTER ========== *//*
 .footer {
   background: #0f0f0f;
   color: #a0a0a0;
@@ -883,7 +883,7 @@ a {
 .footer-tagline {
   font-size: 12px;
   color: #707070;
-  /* text-transform: uppercase; */
+  /* text-transform: uppercase; *//*
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -924,7 +924,7 @@ a {
   font-weight: 600;
   color: #f5f5f5;
   margin-bottom: 16px;
-  /* text-transform: uppercase; */
+  /* text-transform: uppercase; *//*
   letter-spacing: 1px;
 }
 
@@ -992,7 +992,7 @@ a {
   color: var(--gold);
 }
 
-/* ========== ANIMATIONS ========== */
+/* ========== ANIMATIONS ========== *//*
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1013,7 +1013,7 @@ a {
   }
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== RESPONSIVE DESIGN ========== *//*
 @media screen and (max-width: 768px) {
   .top-bar {
     display: none;
@@ -1061,7 +1061,7 @@ a {
 
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; /* Prevents zoom on iOS *//*
   }
 
   .mobile-bottom-nav {
