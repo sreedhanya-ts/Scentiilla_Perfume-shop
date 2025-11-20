@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
+  <title>Blog Details</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,10 +16,11 @@
 
   <!-- Link your CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product-details.css">
 </head>
 <body>
 
-<!-- Header -->
+<!-- Header will load here -->
 <header class="custom-header">
 
   <!-- ======= Desktop Top Bar ======= -->
@@ -67,7 +68,9 @@
 
     <div class="mobile-top-icons">
       <a href="#"><i class="fas fa-search"></i></a>
-      <a href="#"><i class="fas fa-shopping-bag"></i></a>
+      <a href="#" class="cart-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+        <i class="fas fa-shopping-bag"></i>
+      </a>
     </div>
   </div>
 
@@ -82,18 +85,17 @@
     </div>
 
     <ul class="mobile-menu-list">
-      <li><a href="index.html">HOME</a></li>
       <li><a href="about-us.html">ABOUT US</a></li>
       <!--<li><a href="#">CONCENTRATED PERFUME</a></li>
       <li><a href="#">EAU DE PARFUM</a></li>
       <li><a href="#">COLLECTIONS</a></li>-->
       <li><a href="products.html">PRODUCTS</a></li>
-      <li><a href="#">BLOG</a></li>
+      <li><a href="blog.html">BLOG</a></li>
       
       
 
       <!-- Mobile Blog Accordion -->
-     <!-- <li class="mobile-accordion">
+      <!--<li class="mobile-accordion">
         <button class="accordion-toggle">BLOG <i class="fas fa-chevron-down"></i></button>
         <div class="accordion-content">
           <div class="accordion-section">
@@ -137,7 +139,7 @@
       <i class="fas fa-home"></i>
       <span>HOME</span>
     </a>
-    <a href="products.html" class="nav-item" data-page="shop">
+    <a href="#shop" class="nav-item" data-page="shop">
       <i class="fas fa-shopping-bag"></i>
       <span>SHOP</span>
     </a>
@@ -158,14 +160,14 @@
   <!-- ======= Main Navigation (Desktop) ======= -->
   <nav class="menu-bar">
     <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about-us.html">ABOUT US</a></li>
-      <!--<li><a href="#">CONCENTRATED PERFUME</a></li>
+        <li><a href="\index.html">HOME</a></li>
+       <li><a href="about-us.html">ABOUT US</a></li>
+     <!--<li><a href="#">CONCENTRATED PERFUME</a></li>
       <li><a href="#">EAU DE PARFUM</a></li>
       <li><a href="#">COLLECTIONS</a></li>-->
       <li><a href="products.html">PRODUCTS</a></li>
-      <li><a href="#">BLOG</a></li>
-      
+      <li><a href="blog.html">BLOG</a></li>
+     
       
 
       <!-- BLOG DROPDOWN SECTION -->
@@ -200,174 +202,152 @@
     </ul>
   </nav>
 </header>
- 
 
-  <body>
+<body>
 
-   <div class="container">
-
-    <h1 class="blog-title">BLOG</h1>
+<div class="container py-5">
 
     <div class="row">
 
-      <!-- LEFT POSTS -->
-      <div class="col-md-9">
+        <!-- LEFT CONTENT -->
+        <div class="col-md-8">
 
-        <!-- Post 1 -->
-        <div class="row mb-5">
-          <div class="col-md-5">
-            <img src="images/banner1.jpeg" class="blog-img">
-          </div>
-          <div class="col-md-7">
-            <h3 class="post-title">Maecenas Ultricies</h3>
-
-            <div class="meta mt-2">
-              <span><i class="fa-regular fa-calendar"></i> October 10, 2018</span>
-              <span><i class="fa-solid fa-user"></i> Admin</span>
-              <span><i class="fa-solid fa-tag"></i> Fashion</span>
-              <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
-            </div>
-
-            <p class="mt-2">
-              Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
-              Aenean posuere libero eu augue condimentum rhoncus.
-            </p>
-
-            <a href="blog-details.html" class="btn btn-dark">Read More</a>
             
-            <div class="social-icons mt-3">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-pinterest"></i>
-              <i class="fa-brands fa-google-plus"></i>
-              <i class="fa-brands fa-linkedin"></i>
-            </div>
-          </div>
-        </div>
 
-        <!-- Post 2 -->
-        <div class="row mb-5">
-          <div class="col-md-5">
-            <img src="images/banner2.jpeg" class="blog-img">
-          </div>
-          <div class="col-md-7">
-            <h3 class="post-title">Etiam Magna</h3>
+            <h2 class="blog-title">Blog </h2>
 
-            <div class="meta mt-2">
-              <span><i class="fa-regular fa-calendar"></i> October 10, 2018</span>
+ <img src="images/banner1.jpeg" class="img-fluid mb-4">
+            <div class="meta mb-3">
+                <span><i class="fa-regular fa-calendar"></i> October 10, 2018</span>
               <span><i class="fa-solid fa-user"></i> Admin</span>
               <span><i class="fa-solid fa-tag"></i> Fashion</span>
               <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
             </div>
 
-            <p class="mt-2">
-              Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
-              Aenean posuere libero eu augue condimentum rhoncus.
+           
+
+            <p>
+                Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero eu augue
+                condimentum rhoncus. Praesent ornare tortor ac ante egestas hendrerit.
             </p>
 
-            <button class="read-btn">READ MORE</button>
-
-            <div class="social-icons mt-3">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-pinterest"></i>
-              <i class="fa-brands fa-google-plus"></i>
-              <i class="fa-brands fa-linkedin"></i>
+            <div class="quote-box">
+                “Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. Duis est nisi, tincidunt ac urna sed,
+                cursus blandit lectus.”
             </div>
-          </div>
+
+            <p>
+                Aenean et tempor eros. Etiam varius enim nec quam tempor, sed efficitur ex ultrices. Phasellus pretium est vel dui
+                vestibulum condimentum.
+            </p>
+
+            <hr>
+
+            <!-- Comments -->
+            <h4 class="mt-4">3 Comments</h4>
+
+            <div class="comment-box">
+                <img src="images/banner3.jpg">
+                <div>
+                    <b>ADMIN</b><br>
+                    <small>October 16, 2018 at 1:38 am</small>
+                    <p>just a nice post</p>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <img src="images/product6.png">
+                <div>
+                    <b>DEMO</b><br>
+                    <small>October 16, 2018 at 1:38 am</small>
+                    <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur.</p>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <img src="images/product11.png">
+                <div>
+                    <b>ADMIN</b><br>
+                    <small>October 16, 2018 at 1:38 am</small>
+                    <p>Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Leave a reply -->
+            <h4 class="mt-4">Leave a Reply</h4>
+            <p>Your email address will not be published.</p>
+
+            <form>
+                <div class="mb-3">
+                    <label>Comment</label>
+                    <textarea class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Name*</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Email*</label>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+
+                <button class="btn btn-dark px-4">Post Comment</button>
+            </form>
+
         </div>
 
-      </div>
+        <!-- SIDEBAR -->
+        <div class="col-md-4">
 
-       <!-- RIGHT SIDE SIDEBAR -->
-      <div class="col-md-3">
+            <h5 class="sidebar-title">Search</h5>
+            <input class="form-control mb-2" placeholder="Search...">
+            <button class="btn btn-dark w-100 mb-4">SEARCH</button>
 
-        <!-- Search -->
-        <div class="sidebar-search">
-  <h5 class="sidebar-title">SEARCH</h5>
-  <input type="text" class="form-control mb-3" placeholder="Search...">
-  <button class="btn btn-dark w-100 mb-4">SEARCH</button>
+            <h5 class="sidebar-title">Tag Products</h5>
+            <div class="tag-box">
+                <span>asian</span>
+                <span>brown</span>
+                <span>euro</span>
+                <span>fashion</span>
+                <span>hat</span>
+                <span>t-shirt</span>
+                <span>teen</span>
+                <span>travel</span>
+            </div>
+
+            <h5 class="sidebar-title">Recent Posts</h5>
+            <div class="recent-post">
+                <img src="images/product10.png">
+                <div>
+                    <p class="m-0">Blog Image Post</p>
+                    <small>March 16, 2018</small>
+                </div>
+            </div>
+
+            <h5 class="sidebar-title">Categories</h5>
+            <div class="categories">
+                <a href="#">Fashion</a>
+                <a href="#">Travel</a>
+                <a href="#">Photography</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">WordPress</a>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-
-        <!-- Tags -->
-        <h5 class="sidebar-title">TAG PRODUCTS</h5>
-        <div class="tag-box mb-4">
-          <span>asian</span>
-          <span>brown</span>
-          <span>euro</span>
-          <span>fashion</span>
-          <span>hat</span>
-          <span>t-shirt</span>
-          <span>teen</span>
-          <span>travel</span>
-          <span>white</span>
-        </div>
-
-        <!-- Recent Posts -->
-        <h5 class="sidebar-title">RECENT POSTS</h5>
-        <div class="recent-post">
-          <img src="images/banner1.jpeg">
-          <div>
-            <p class="mb-0">Blog Image Post</p>
-            <small>March 16, 2018</small>
-          </div>
-        </div>
-
-        <div class="recent-post">
-          <img src="images/banner2.jpeg">
-          <div>
-            <p class="mb-0">Fashion Trends</p>
-            <small>March 20, 2018</small>
-          </div>
-        </div>
-
-        <!-- Comments -->
-        <h5 class="sidebar-title mt-5">COMMENTS</h5>
-
-        <div class="comment-box">
-          <img src="images/product9.png">
-          <div>
-            <b>demo</b> says:
-            <p class="m-0">Quisque semper nunc</p>
-          </div>
-        </div>
-
-        <div class="comment-box">
-          <img src="images/product12.png">
-          <div>
-            <b>admin</b> says:
-            <p class="m-0">Quisque orci porta…</p>
-          </div>
-        </div>
-
-        <div class="comment-box">
-          <img src="images/product8.png">
-          <div>
-            <b>demo</b> says:
-            <p class="m-0">just a nice post</p>
-          </div>
-        </div>
-
-        <!-- Categories -->
-        <h5 class="sidebar-title">CATEGORIES</h5>
-
-        <div class="categories">
-          <a href="#">Fashion</a>
-          <a href="#">Travel</a>
-          <a href="#">Photography</a>
-          <a href="#">Lifestyle</a>
-          <a href="#">WordPress</a>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
+</body>
 
 
 
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="footer py-5">
   <div class="container">
     <div class="row g-4 mb-5">
@@ -440,9 +420,7 @@
     </div>
   </div>
 </footer>
-
-
-  <!-- Bootstrap JS -->
+<!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
